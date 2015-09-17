@@ -1,0 +1,214 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	font-family: "Segoe UI Light", "Segoe UI", Verdana, Arial, serif;
+}
+
+.navbar{
+	margin: 0;
+	background-color: #FFFFFF;
+	transition: background-color 200ms, box-shadow 200ms;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.navbar ul li a{
+	text-decoration: none;
+	color: #000000;
+	font-size: 18px;
+}
+
+.navbar ul li:after{
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0;
+	background: #8D6E63;
+	transition: width 200ms ease, background-color 200ms ease;
+}
+
+.navbar ul li:hover:after{
+	width: 100%;
+	background: #000000;
+}
+
+.navbar.nav-transp{
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.navbar.nav-transp ul li a{
+	color: #FFFFFF;
+	text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+	background-color: transparent;
+}
+
+.navbar.nav-transp ul li:hover a{
+	color: #D7CCC8;
+}
+
+.navbar.nav-transp ul li:after{
+	display: none;
+}
+
+#jumbo-reservation{
+	height: 100%;
+	background: #2C436F url('../img/banner2.jpg') center;
+	background-size: cover;
+	padding: 0;
+}
+
+#jumbo-reservation-content{
+	max-width: 600px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 6px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+	padding-top: 0;
+}
+
+#jumbo-reservation-content h1{
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
+#jumbo-reservation-content h2{
+	margin-top: 0;
+}
+
+#jumbo-reservation-content p{
+	font-size: 16px;
+}
+
+#jumbo-reservation-content ul{
+	list-style: none;
+}
+
+.footer {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin-top: 40px;
+	border-top: 1px solid #eee;
+}
+
+hr{
+	margin: 10px;
+	border-top: 1px solid #eee;
+}
+
+.row-rooms .col-room{
+	height: 260px;
+	background-position: center;
+	background-size: cover;
+	cursor: pointer;
+	margin-top: 10px;
+	border-radius: 6px;
+}
+
+.row-rooms .col-room .overlay{
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 12px;
+	margin: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: opacity 200ms, height 175ms;
+	height: 0;
+}
+
+.row-rooms .col-room:hover .overlay{
+	opacity: 1;
+	height: 100%;
+}
+
+.row-rooms .col-room .overlay h2{
+	margin-top: 0;
+}
+
+.row-rooms .col-room img{
+	max-height: 300px;
+	margin: 0 auto;
+}
+
+.row-rooms-title{
+	text-align: center;
+}
+
+#wait{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: none;
+	z-index: 10000;
+}
+
+#wait .glyphicon{
+	font-size: 72px;
+	color: #FFFFFF;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)
+}
+
+.fa-spin-custom, .glyphicon-spin {
+	-webkit-animation: spin 1000ms infinite linear;
+	animation: spin 1000ms infinite linear;
+}
+
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+@keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+
+.form-control.error{
+	border-color: #FF0000;
+	box-shadow: 1px 1px 1px rgba(255, 20, 0, 0.6);
+}
+
+.form-group{
+	margin-top: 30px;
+}
+
+.form-group .error-label{
+	position: absolute;
+	top: -20px;
+}
+
+#reservation-form{
+
+}
+
+#reservation-form .part{ display: none; }
+#reservation-form .part-1{ display: block; }
